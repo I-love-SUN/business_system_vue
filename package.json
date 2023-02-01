@@ -1,5 +1,5 @@
 {
-  "name": "business_system",
+  "name": "vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,11 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^1.2.6",
     "core-js": "^3.8.3",
+    "element-ui": "^2.15.12",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1"
   },
