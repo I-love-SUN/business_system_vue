@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import App from "@/App";
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register')
   },
 ]
 
@@ -42,13 +53,13 @@ export const setRoutes =()=>{
   const  storemenus = localStorage.getItem("menus")
   if(storemenus){
     //拼装动态路由
-    const manageRoute ={path: '/', name: 'main', component: () =>import('../views/main'), redirect:"/login",children:[
-        // {
-        //   path: 'person',
-        //   name: 'Person',
-        //   component:() => import("../views/front/Person.vue")
-        // },
-      ]}
+    const manageRoute ={
+      path: '/',
+      name: 'Public',
+      component: () =>import('../views/Public.vue'),
+      redirect:"/login",
+      children:[]
+    }
 
     const  menus = JSON.parse(storemenus)
 
@@ -67,7 +78,7 @@ export const setRoutes =()=>{
     })
 
     const currencyRoutes = router.getRoutes().map(v=>v.name)
-    if(!currencyRoutes.includes('main')){
+    if(!currencyRoutes.includes('Public')){
       router.addRoute(manageRoute)
     }
   }

@@ -1,5 +1,5 @@
 <template>
-    <el-menu :default-openeds="['1', '3','5','6']"style="min-height: 100% ; overflow-x: hidden"
+    <el-menu :default-openeds="['1','3','5','6']"style="min-height: 100% ; overflow-x: hidden"
              background-color="rgb(48 , 65 ,86)"
              text-color="#fff"
              active-text-color="#ffd04b"

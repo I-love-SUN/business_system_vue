@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-
+<!--    <Public/>-->
+      <el-main>
+          <router-view/>
+      </el-main>
   </div>
 </template>
 
@@ -8,9 +11,9 @@
 
 </style>
 <script>
-  import Aside from "@/components/Aside";
-  import Header from "@/components/Header";
+  import Public from "@/views/Public";
+
   export default {
-    components: {Header, Aside}
+    components: {Public,}
   }
 </script>

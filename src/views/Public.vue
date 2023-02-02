@@ -1,13 +1,12 @@
 <template>
     <el-container style="min-height: 100vh">
         <el-aside :width= " sideWidth + 'px' " style="box-shadow: 2px 0 6px rgb(0 21 41 / 35%)">
-            <Asid :is-collapse="isCollapse" :logo-text-show="logoTextShow"/>
+            <Aside :is-collapse="isCollapse" :logo-text-show="logoTextShow"/>
         </el-aside>
         <el-container>
             <el-header style="border-bottom: 1px solid #ccc ">
                 <Header :collapse-btn-class=" collapseBtnClass" :collapse="collapse" />
             </el-header>
-
             <!--下面是主体部分-->
             <el-main>
                 <!--当前页面的子路由会在<router-view/>中展示-->
@@ -24,7 +23,7 @@
     import Header from "../components/Header";
 
     export default {
-        name: 'Home',
+        name: 'Public',
         components: {Header, Aside},
         data()
         {

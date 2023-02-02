@@ -12,20 +12,12 @@
         <div>
             <el-dropdown style="width: 150px; cursor: pointer; text-align: right">
                 <div style="display: inline-block">
-                    <img :src="this.form.avatarurl" alt="   "
-                         style="width: 50px; border-radius: 70%; position: relative; top: 10px; right: 5px">
                     <span>{{ user.username }}</span><i class="el-icon-arrow-down" style="margin-left: 5px"></i>
                 </div>
                 <el-dropdown-menu slot="dropdown" style="width: 100px; text-align: center">
                     <el-dropdown-item>
-                        <!--                            <router-link to="person">个人信息</router-link>-->
-                        <span  style="text-decoration: none" @click="$router.push('/person')">个人信息</span>
-
-                    </el-dropdown-item>
-                    <el-dropdown-item>
                         <span  style="text-decoration: none" @click="logout">退出登录</span>
                     </el-dropdown-item>
-                    <el-dropdown-item @click.native="backToFront">回到前台</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
