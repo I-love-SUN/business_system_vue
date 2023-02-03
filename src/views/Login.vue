@@ -21,6 +21,7 @@
 </template>
 
 <script>
+    import setRoutes from '../router'
     export default {
         name: "Login",
         data() {
@@ -73,5 +74,33 @@
 </script>
 
 <style scoped>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
 
+    /* body绑定overflow是为了让图片变大不出现滚动条
+       bodySize绑定overflow是为了让具体内容超出浏览器时出现滚动条
+     */
+
+    .bodySize {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: linear-gradient(to bottom right,#FC2933,#3F5EF8);
+    }
+
+
+    .mainSize {
+        height: 100%;
+        width: 100%;
+        background-position: center; /* 图片居中 */
+        background-attachment: fixed; /* 背景图片不会随着页面的滚动而滚动 */
+        background-size: cover; /* 此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小 */
+        position: absolute;
+    }
 </style>
